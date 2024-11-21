@@ -1,19 +1,8 @@
-
-# GitHubPrivateRepositoryDownloadStrategy downloads contents from GitHub
-# Private Repository. To use it, add
-# `:using => :github_private_repo` to the URL section of
-# your formula. This download strategy uses GitHub access tokens (in the
-# environment variables `HOMEBREW_GITHUB_API_TOKEN`) to sign the request.  This
-# strategy is suitable for corporate use just like S3DownloadStrategy, because
-# it lets you use a private GitHub repository for internal distribution.  It
-# works with public one, but in that case simply use CurlDownloadStrategy.
 class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
   require "utils/formatter"
   require "utils/github"
 
   def initialize(url, name, version, **meta)
-    odeprecated("GitHubPrivateRepositoryDownloadStrategy",
-      "maintaining GitHubPrivateRepositoryDownloadStrategy in your own formula or tap")
     super
     parse_url_pattern
     set_github_token
@@ -61,13 +50,12 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
 end
 
 # GitHubPrivateRepositoryReleaseDownloadStrategy downloads tarballs from GitHub
-# Release assets. To use it, add `:using => :github_private_release` to the URL section
-# of your formula. This download strategy uses GitHub access tokens (in the
+# Release assets. To use it, add
+# `:using => GitHubPrivateRepositoryReleaseDownloadStrategy` to the URL section of
+# your formula. This download strategy uses GitHub access tokens (in the
 # environment variables HOMEBREW_GITHUB_API_TOKEN) to sign the request.
 class GitHubPrivateRepositoryReleaseDownloadStrategy < GitHubPrivateRepositoryDownloadStrategy
   def initialize(url, name, version, **meta)
-    odeprecated("GitHubPrivateRepositoryReleaseDownloadStrategy",
-      "maintaining GitHubPrivateRepositoryReleaseDownloadStrategy in your own formula or tap")
     super
   end
 
