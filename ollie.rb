@@ -1,3 +1,4 @@
+require "download_strategy"
 
 class Ollie < Formula
     desc ""
