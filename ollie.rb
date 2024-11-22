@@ -9,16 +9,16 @@ class Ollie < Formula
   
     on_macos do
       if Hardware::CPU.arm?
-        url "https://github.com/TeamGoodOnes/ollie-cli/releases/download/v0.1.0/ollie-cli_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "50af17bed073d0bf6316554af99196e0c9888f7a6d1fa1e9a61935434c970da5"
+        url "https://github.com/TeamGoodOnes/ollie-cli/releases/download/v0.1.1/ollie-cli_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "508a159cfd32243b11120dc509106707d03729f99fc0e2e55be4465d6bef22fd"
       
         def install
           bin.install "ollie"
         end
       end
       if Hardware::CPU.intel?
-        url "https://github.com/TeamGoodOnes/ollie-cli/releases/download/v0.1.0/ollie-cli_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "86fe0c4c5dc4a0ad19ff3c2cbeb4fbfd374d69f39ade3f7e0c22859b4ddf97ec"
+        url "https://github.com/TeamGoodOnes/ollie-cli/releases/download/v0.1.1/ollie-cli_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "d76b5a2f95ba6f48bb5b116111f86b231a5207eca3ca0da60eb7466376286e73"
   
         def install
           bin.install "ollie"
