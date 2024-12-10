@@ -6,22 +6,22 @@ require_relative "./lib/download_strategy"
 class Ollie < Formula
   desc ""
   homepage ""
-  version "0.1.4"
+  version "0.1.5"
 
   depends_on "git" if OS.mac?
   depends_on :macos
 
   on_intel do
-    url "https://github.com/TeamGoodOnes/ollie-cli/releases/download/v0.1.4/ollie-cli_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "fbc1eaaf956309ce061ead6ca307c486d954cb93bf84d2ab3d4c924b57c0fd5c"
+    url "https://github.com/TeamGoodOnes/ollie-cli/releases/download/v0.1.5/ollie-cli_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "98f107d9593883507e56cf74cdcfef1df0fab53a4de1b08aea6a40886cd24516"
 
     def install
       bin.install "ollie"
     end
   end
   on_arm do
-    url "https://github.com/TeamGoodOnes/ollie-cli/releases/download/v0.1.4/ollie-cli_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "0b7bc00d804ec733b4d6c1196bf67a7abfd2ca47712123bb54c234a1c7abd9fc"
+    url "https://github.com/TeamGoodOnes/ollie-cli/releases/download/v0.1.5/ollie-cli_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "af254c3ecd835a9d8e3fdb26cd5e6b24fb5005562394ebfd814af02102b80bb3"
 
     def install
       bin.install "ollie"
